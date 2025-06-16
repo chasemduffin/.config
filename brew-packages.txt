@@ -7,6 +7,7 @@ helm-docs
 jq
 kustomize
 node
+nmap
 oh-my-posh
 openfortivpn
 openldap
@@ -23,5 +24,6 @@ cursor
 font-fira-code
 iterm2
 onedrive
+microsoft-outlook
 powershell
 spotify
