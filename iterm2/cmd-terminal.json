@@ -363,7 +363,7 @@
     "Alpha Component" : 1,
     "Green Component" : 0.19519008605778218
   },
-  "Name" : "Default",
+  "Name" : "cmd-terminal",
   "Use Tab Color (Dark)" : false,
   "Blink Allowed" : false,
   "Transparency" : 0.096344866071428573,
@@ -545,7 +545,7 @@
     "Alpha Component" : 1,
     "Green Component" : 0.54621781805157665
   },
-  "Normal Font" : "FiraCodeNFM-Reg 12",
+  "Normal Font" : "FiraMonoNFM-Regular 11",
   "Unlimited Scrollback" : true,
   "Ansi 12 Color (Light)" : {
     "Red Component" : 0.65349078178405762,

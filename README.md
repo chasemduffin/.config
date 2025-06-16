@@ -1,7 +1,7 @@
-Edit .zshrc to the following:
+Edit .zprofile to the following:
 
 ```
-source ~/.config/zshrc
+source ~/src-local/.config/zprofile
 ```
 
 # Installing brew packages
