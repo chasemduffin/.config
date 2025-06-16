@@ -1,0 +1,27 @@
+# formulae
+docker
+docker-completion
+fzf
+helm
+helm-docs
+jq
+kustomize
+node
+oh-my-posh
+openfortivpn
+openldap
+pyenv
+tenv
+terraform-docs
+terraformer
+
+# casks
+alfred
+1password
+chatgpt
+cursor
+font-fira-code
+iterm2
+onedrive
+powershell
+spotify
