@@ -20,3 +20,7 @@ done
 compinit -C
 
 export PATH=~/anaconda3/bin:$PATH
+
+export FZF_COMPLETION_OPTS="'--border --tiebreak=chunk"export PATH="$HOME/.tgenv/bin:$PATH"
+export TENV_AUTO_INSTALL=true
+export TERRAGRUNT_TFPATH=terraform
