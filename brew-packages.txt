@@ -14,7 +14,6 @@ openfortivpn
 openldap
 pyenv
 tenv
-serverless
 terraform-docs
 terraformer
 
