@@ -28,3 +28,4 @@ onedrive
 microsoft-outlook
 powershell
 spotify
+windows-app
