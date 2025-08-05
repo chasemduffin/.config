@@ -3,6 +3,7 @@ awscli
 docker
 docker-completion
 fzf
+glab
 helm
 helm-docs
 jq
