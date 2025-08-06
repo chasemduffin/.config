@@ -1,5 +1,6 @@
 # formulae
 achannarasappa/tap/ticker
+argocd
 awscli
 docker
 docker-completion
