@@ -19,6 +19,7 @@ pyenv
 tenv
 terraform-docs
 terraformer
+yq
 
 # casks
 alfred
@@ -28,7 +29,9 @@ cursor
 font-fira-code
 iterm2
 onedrive
+microsoft-excel
 microsoft-outlook
+microsoft-powerpoint
 powershell
 spotify
 windows-app
