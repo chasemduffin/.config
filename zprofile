@@ -11,8 +11,8 @@ zle -N down-line-or-beginning-search
 #arrow key binds
 bindkey "^[[A" up-line-or-beginning-search # Up
 bindkey "^[[B" down-line-or-beginning-search # Down
-bindkey "^[[C" forward-word # Forward
-bindkey "^[[D" backward-word # Backward
+bindkey "^[[1;3D" forward-word # Forward
+bindkey "^[[1;3D" backward-word # Backward
 
 
 ## -- autocompletions
