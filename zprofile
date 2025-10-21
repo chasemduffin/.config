@@ -24,3 +24,11 @@ export PATH=~/anaconda3/bin:$PATH
 export FZF_COMPLETION_OPTS="'--border --tiebreak=chunk"export PATH="$HOME/.tgenv/bin:$PATH"
 export TENV_AUTO_INSTALL=true
 export TERRAGRUNT_TFPATH=terraform
+
+# History Options
+HISTFILE=~/.zsh_history
+HISTSIZE=999999999
+SAVEHIST=$HISTSIZE
+setopt INC_APPEND_HISTORY # Appends history incrementally as commands are finished
+setopt SHARE_HISTORY      # Shares history across multiple Zsh sessions
+setopt EXTENDED_HISTORY   # Adds timestamps to history entries
