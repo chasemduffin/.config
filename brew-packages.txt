@@ -6,6 +6,7 @@ docker
 docker-completion
 fzf
 glab
+gnupg
 helm
 helm-docs
 jq
