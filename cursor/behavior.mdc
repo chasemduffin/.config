@@ -1,0 +1,16 @@
+---
+description: Agent behavior constraints and preferred tools
+alwaysApply: true
+---
+
+# Behavior
+
+- When you create a merge request, automatically open it my browser for me to review.
+- In terms of CRUD, you are only allowed to perform read actions without asking. You must always ask permission before performing Create, Update, Destroy actions. This applies to all systems and tools.
+- Prefer these common tools:
+  - AWS CLI
+  - ArgoCD CLI
+  - kubectl
+  - helm
+  - terragrunt
+  - terraform-docs
