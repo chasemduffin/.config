@@ -25,7 +25,6 @@ yq
 # casks
 alfred
 1password
-chatgpt
 cursor
 font-fira-code
 iterm2

@@ -53,10 +53,32 @@ _aws_sso_auto_login_wrapper() {
     local exit_code=$?
 
     # Only check the file if command failed
-    if [[ $exit_code -ne 0 ]] && grep -q "the SSO session has expired" "$stderr_file"; then
-        echo "🔄 Detected expired SSO session. Logging in..." >&2
-        
-        if aws sso login --profile gnr8-workspace; then
+    local sso_expired_patterns=(
+        "the SSO session has expired"
+        "The SSO session associated with this profile has expired"
+    )
+    if [[ $exit_code -ne 0 ]] && grep -qE "$(printf '%s|' "${sso_expired_patterns[@]}" | sed 's/|$//')" "$stderr_file"; then
+        local profile=""
+        local args=("$@")
+        for i in {1..${#args[@]}}; do
+            if [[ "${args[$i]}" == "--profile" ]]; then
+                profile="${args[$((i+1))]}"
+                break
+            elif [[ "${args[$i]}" == --profile=* ]]; then
+                profile="${args[$i]#--profile=}"
+                break
+            fi
+        done
+        profile="${profile:-${AWS_PROFILE:-}}"
+
+        local login_args=()
+        if [[ -n "$profile" ]]; then
+            login_args=(--profile "$profile")
+        fi
+
+        echo "🔄 Detected expired SSO session${profile:+ for profile '$profile'}. Logging in..." >&2
+
+        if aws sso login "${login_args[@]}"; then
             echo "✅ Login successful. Retrying command..." >&2
             rm "$stderr_file"
             command "$cmd_name" "$@"

@@ -5,11 +5,13 @@ alwaysApply: true
 
 # Behavior
 
+- Before you create a new branch, always pull the latest changes from the project on the relevant branches first.
 - When you create a merge request, automatically open it my browser. Always tag me as the assignee and then watch for resulting CI. Look at previous jobs to guess how long to sleep.
 - In terms of CRUD, you are only allowed to perform read actions without asking. You must always ask permission before performing Create, Update, Destroy actions. This applies to all systems and tools.
 - Prefer to use these common tools:
   - AWS CLI
   - ArgoCD CLI
+  - glab CLI
   - kubectl
   - helm
   - terragrunt
