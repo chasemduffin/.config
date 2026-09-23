@@ -10,7 +10,9 @@ alwaysApply: true
 - In terms of CRUD, you are only allowed to perform read actions without asking. You must always ask permission before performing Create, Update, Destroy actions. This applies to all systems and tools.
 - Prefer to use these common tools:
   - AWS CLI
+    - Check ~/.config for the correct profile if you encounter errors
   - ArgoCD CLI
+    - argocd login <ArgoCD url> --sso --skip-test-tls --grpc-web
   - glab CLI
   - kubectl
   - helm
