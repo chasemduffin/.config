@@ -94,3 +94,28 @@ _aws_sso_auto_login_wrapper() {
 for cmd in terragrunt terraform aws; do
     eval "function $cmd() { _aws_sso_auto_login_wrapper $cmd \"\$@\"; }"
 done
+
+# Find which configured AWS account owns an S3 bucket.
+findbucket() {
+  if [[ $# -ne 1 ]]; then
+    print -u2 'Usage: findbucket BUCKET_NAME'
+    return 2
+  fi
+
+  local bucket="$1" profile count account
+
+  while IFS= read -r profile; do
+    count=$(aws s3api list-buckets --profile "$profile" \
+      --query "Buckets[?Name=='${bucket}'] | length(@)" --output text 2>/dev/null) || continue
+    [[ "$count" == 1 ]] || continue
+
+    account=$(aws sts get-caller-identity --profile "$profile" \
+      --query Account --output text 2>/dev/null) || continue
+    [[ -n "$account" ]] || continue
+    print -r -- "$account"
+    return 0
+  done < <(aws configure list-profiles 2>/dev/null)
+
+  print -u2 "No matching bucket found in accessible SSO profiles: $bucket"
+  return 1
+}
