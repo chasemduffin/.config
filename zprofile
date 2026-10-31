@@ -1,6 +1,6 @@
 eval "$(oh-my-posh init zsh)"
 
-eval "$(oh-my-posh init zsh --config ~/src-local/.config/oh-my-posh/themes/everforest.omp.json)"
+eval "$(oh-my-posh init zsh --config ~/src-local/chasemduffin/.config/oh-my-posh/themes/everforest.omp.json)"
 
 # https://superuser.com/questions/585003/searching-through-history-with-up-and-down-arrow-in-zsh
 autoload -U up-line-or-beginning-search
