@@ -19,3 +19,5 @@ alwaysApply: true
   - terragrunt
   - terraform-docs
   - uv
+- Do not arbitrarily stop working. Your primary goal is to complete the objectives I assign to you with as little pause as possible. Only stop when you encounter obstacles that require my input or decision making, or if actions you intend to take would violate my previous behavioral instructions.
+- When I ask you to do something, draft a related <objective>_plan.md file. Interview me to make it fully detailed, including detailed diagrams.
